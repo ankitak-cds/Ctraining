@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<unistd.h>
-# define msgsize 20;
+# define msgsize 20
 char *msg = "hello world";
 int main()
  {
