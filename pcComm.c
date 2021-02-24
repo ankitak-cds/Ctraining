@@ -13,14 +13,14 @@ int main()
   //parent
   if((pid = fork())>0){
   write(p[1],msg,MSGSIZE);//parents msg
-   printf("\nParent message sent successfully");
+   printf("\nParent message sent successfully\n");
   }
   else
   {
    close(p[1]);
    while((m1=read(p[0],buf,MSGSIZE))>0)
    printf("\n%s",buf);
-   printf("\nReceived parent's message");
+   printf("\nReceived parent's message\n");
    printf("Finished reading\n");
    }
    return 0;
