@@ -37,7 +37,8 @@ int main()
    {
      close(p[1]);
      while((m2=read(p[0],buf,MSGSIZE))>0)
-    {
+    { 
+        printf("\n%s",buff);
         printf("\nReceived child's message\n");
         printf("\nFinished reading\n");
      }
