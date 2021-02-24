@@ -9,10 +9,9 @@ int main()
     if(pipe(p) < 0)
         exit(1);
    
-    write(p[1],msg,MSGSIZE);
+    write(p[1],msg1,MSGSIZE);
    
     read(p[0],buf,MSGSIZE);
     printf("%s\n",buf);
-    }
     return 0;
 }
