@@ -29,5 +29,6 @@ void main()
     }
     fwrite(&emp1,sizeof(emp1),10,fp);
     printf("\nDone with writing");
+    printf("\n");
     close(fp);
 }
