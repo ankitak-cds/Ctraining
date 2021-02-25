@@ -26,8 +26,8 @@ void main()
         strcpy(emp1[i].empid,"1");
         strcpy(emp1[i].empname,"Ankita");
         strcpy(emp1[i].empcom,"CDS");
-        fwrite(&emp1[i],sizeof(emp1[i]),1,fp);
     }
+    fwrite(&emp1,sizeof(emp1),10,fp);
     printf("\nDone with writing");
     close(fp);
 }
