@@ -11,24 +11,12 @@ typedef struct employee emp;
 FILE *fp;
 void main()
 {
-    emp emp1[10];
-    int n;
+    emp emp1;
     fp=fopen("employeedb","wb+");
-    printf("\nEnter the number of employee");
-    scanf("%d",&n);
-    printf("\nEnter the employee id,emplyoee name and employee company");
-    for(int i=0;i<n;i++)
-    {
-       scanf("%s%s%s",emp1[i].empid,emp1[i].empname,emp1[i].empempcom);
-    }
-    for(int i=0;i<n;i++)
-    {
-        strcpy(emp1[i].empid,"1");
-        strcpy(emp1[i].empname,"Ankita");
-        strcpy(emp1[i].empcom,"CDS");
-    }
-    fwrite(&emp1,sizeof(emp1),10,fp);
+    strcpy(emp1.empid,"1");
+    strcpy(emp1.empname,"Ankita");
+    strcpy(emp1.empcom,"CDS");
+    fwrite(&emp1,sizeof(emp1),1,fp);
     printf("\nDone with writing");
-    printf("\n");
     close(fp);
 }

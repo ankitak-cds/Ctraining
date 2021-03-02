@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include"cube.h"
-void main()
+int main()
 {
-    int res=cube(10);
-    printf("%d",res);
+   int result=cube(10);
+   printf("cube is %d",result);
+   return 0;
 }
